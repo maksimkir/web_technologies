@@ -1,0 +1,51 @@
+* {
+    font-family:Arial ;
+    font-size: 20px;
+    line-height: 40px; 
+}
+
+
+p {
+    color: green;
+    text-align: center;
+}
+
+div{
+    text-align: justify;
+}
+
+
+.primary {
+    color: red;
+}
+
+.singleline {
+    white-space: nowrap;
+}
+
+#special {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.softshadow {
+    text-shadow: 5px -5px 3px red;
+}
+
+.fancy {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+.wide{
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
+
+
+
+
+
+
+
