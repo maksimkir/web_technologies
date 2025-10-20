@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Анкета студента</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="formContainer">
+      <h1 class="formTitle">Форма анкети студента</h1>
+
+      <!-- Форма GET -->
+      <div class="formBlock">
+        <h2>Анкета (GET)</h2>
+        <form action="" method="get" class="studentForm">
+          <fieldset>
+            <legend>Особисті дані</legend>
+
+            <label for="nameGet">Ім’я:</label>
+            <input
+              type="text"
+              id="nameGet"
+              name="name"
+              placeholder="Введіть ім’я"
+              required
+            />
+
+            <label for="passwordGet">Пароль:</label>
+            <input
+              type="password"
+              id="passwordGet"
+              name="password"
+              placeholder="Введіть пароль"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{6,}"
+              title="Мінімум 6 символів, 1 велика літера, 1 мала літера, 1 цифра"
+              required
+            />
+
+            <label for="emailGet">Email:</label>
+            <input
+              type="email"
+              id="emailGet"
+              name="email"
+              placeholder="Введіть email"
+              required
+            />
+
+            <label for="phoneGet">Мобільний:</label>
+            <input
+              type="tel"
+              id="phoneGet"
+              name="phone"
+              placeholder="+380..."
+              required
+            />
+
+            <label for="birthGet">Дата народження:</label>
+            <input type="date" id="birthGet" name="birth" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Параметри</legend>
+
+            <p>Оберіть стать:</p>
+            <label
+              ><input type="radio" name="genderGet" value="male" />
+              Чоловіча</label
+            >
+            <label
+              ><input type="radio" name="genderGet" value="female" />
+              Жіноча</label
+            >
+            <label
+              ><input type="radio" name="genderGet" value="other" checked />
+              Інша</label
+            >
+
+            <p>Оберіть улюблені предмети:</p>
+            <label
+              ><input type="checkbox" name="subjectGet" value="math" />
+              Математика</label
+            >
+            <label
+              ><input type="checkbox" name="subjectGet" value="cs" />
+              Інформатика</label
+            >
+            <label
+              ><input type="checkbox" name="subjectGet" value="history" />
+              Історія</label
+            >
+            <label
+              ><input type="checkbox" name="subjectGet" value="english" />
+              Англійська</label
+            >
+
+            <p>Виберіть курс навчання:</p>
+            <select name="yearGet" id="yearGet">
+              <option value="1">1 курс</option>
+              <option value="2" selected>2 курс</option>
+              <option value="3">3 курс</option>
+              <option value="4">4 курс</option>
+              <option value="5">5 курс</option>
+            </select>
+
+            <p>Виберіть улюблені мови програмування:</p>
+            <select name="languagesGet" id="languagesGet" multiple size="4">
+              <option value="c++">C++</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="js">JavaScript</option>
+              <option value="c#">C#</option>
+              <option value="php">PHP</option>
+            </select>
+
+            <p>Групи предметів:</p>
+            <select name="groupedGet" id="groupedGet">
+              <optgroup label="Природничі науки">
+                <option value="math">Математика</option>
+                <option value="physics">Фізика</option>
+                <option value="chemistry">Хімія</option>
+              </optgroup>
+              <optgroup label="Гуманітарні науки">
+                <option value="history">Історія</option>
+                <option value="philosophy">Філософія</option>
+                <option value="language">Мови</option>
+              </optgroup>
+            </select>
+
+            <p>Місто проживання:</p>
+            <input list="citiesGet" name="cityGet" id="cityGet" />
+            <datalist id="citiesGet">
+              <option value="Київ"></option>
+              <option value="Львів"></option>
+              <option value="Одеса"></option>
+              <option value="Харків"></option>
+              <option value="Чернівці"></option>
+            </datalist>
+          </fieldset>
+
+          <fieldset>
+            <legend>Додатково</legend>
+            <label for="commentGet">Коментар:</label>
+            <textarea
+              id="commentGet"
+              name="comment"
+              rows="4"
+              cols="50"
+              placeholder="Ваші побажання"
+            ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Завантаження файлу</legend>
+            <input
+              type="file"
+              name="filesGet"
+              id="filesGet"
+              accept="audio/*"
+              multiple
+            />
+          </fieldset>
+
+          <div class="buttons">
+            <button type="submit" class="btn">Надіслати (GET)</button>
+            <button type="reset" class="btn reset">Очистити</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Форма POST -->
+      <div class="formBlock">
+        <h2>Анкета (POST)</h2>
+        <form
+          action=""
+          method="post"
+          enctype="multipart/form-data"
+          class="studentForm"
+        >
+          <fieldset>
+            <legend>Особисті дані</legend>
+
+            <label for="namePost">Ім’я:</label>
+            <input
+              type="text"
+              id="namePost"
+              name="name"
+              placeholder="Введіть ім’я"
+              required
+            />
+
+            <label for="passwordPost">Пароль:</label>
+            <input
+              type="password"
+              id="passwordPost"
+              name="password"
+              placeholder="Введіть пароль"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{6,}"
+              title="Мінімум 6 символів, 1 велика літера, 1 мала літера, 1 цифра"
+              required
+            />
+
+            <label for="emailPost">Email:</label>
+            <input
+              type="email"
+              id="emailPost"
+              name="email"
+              placeholder="Введіть email"
+              required
+            />
+
+            <label for="phonePost">Мобільний:</label>
+            <input
+              type="tel"
+              id="phonePost"
+              name="phone"
+              placeholder="+380..."
+              required
+            />
+
+            <label for="birthPost">Дата народження:</label>
+            <input type="date" id="birthPost" name="birth" required />
+          </fieldset>
+
+          <fieldset>
+            <legend>Параметри</legend>
+
+            <p>Оберіть стать:</p>
+            <label
+              ><input type="radio" name="genderPost" value="male" />
+              Чоловіча</label
+            >
+            <label
+              ><input type="radio" name="genderPost" value="female" />
+              Жіноча</label
+            >
+            <label
+              ><input type="radio" name="genderPost" value="other" checked />
+              Інша</label
+            >
+
+            <p>Оберіть улюблені предмети:</p>
+            <label
+              ><input type="checkbox" name="subjectPost" value="math" />
+              Математика</label
+            >
+            <label
+              ><input type="checkbox" name="subjectPost" value="cs" />
+              Інформатика</label
+            >
+            <label
+              ><input type="checkbox" name="subjectPost" value="history" />
+              Історія</label
+            >
+            <label
+              ><input type="checkbox" name="subjectPost" value="english" />
+              Англійська</label
+            >
+
+            <p>Виберіть курс навчання:</p>
+            <select name="yearPost" id="yearPost">
+              <option value="1">1 курс</option>
+              <option value="2" selected>2 курс</option>
+              <option value="3">3 курс</option>
+              <option value="4">4 курс</option>
+              <option value="5">5 курс</option>
+            </select>
+
+            <p>Виберіть улюблені мови програмування:</p>
+            <select name="languagesPost" id="languagesPost" multiple size="4">
+              <option value="c++">C++</option>
+              <option value="python">Python</option>
+              <option value="java">Java</option>
+              <option value="js">JavaScript</option>
+              <option value="c#">C#</option>
+              <option value="php">PHP</option>
+            </select>
+
+            <p>Групи предметів:</p>
+            <select name="groupedPost" id="groupedPost">
+              <optgroup label="Природничі науки">
+                <option value="math">Математика</option>
+                <option value="physics">Фізика</option>
+                <option value="chemistry">Хімія</option>
+              </optgroup>
+              <optgroup label="Гуманітарні науки">
+                <option value="history">Історія</option>
+                <option value="philosophy">Філософія</option>
+                <option value="language">Мови</option>
+              </optgroup>
+            </select>
+
+            <p>Місто проживання:</p>
+            <input list="citiesPost" name="cityPost" id="cityPost" />
+            <datalist id="citiesPost">
+              <option value="Київ"></option>
+              <option value="Львів"></option>
+              <option value="Одеса"></option>
+              <option value="Харків"></option>
+              <option value="Чернівці"></option>
+            </datalist>
+          </fieldset>
+
+          <fieldset>
+            <legend>Додатково</legend>
+            <label for="commentPost">Коментар:</label>
+            <textarea
+              id="commentPost"
+              name="comment"
+              rows="4"
+              cols="50"
+              placeholder="Ваші побажання"
+            ></textarea>
+          </fieldset>
+
+          <fieldset>
+            <legend>Завантаження файлу</legend>
+            <input
+              type="file"
+              name="filesPost"
+              id="filesPost"
+              accept="audio/*"
+              multiple
+            />
+          </fieldset>
+
+          <div class="buttons">
+            <button type="submit" class="btn">Надіслати (POST)</button>
+            <button type="reset" class="btn reset">Очистити</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
