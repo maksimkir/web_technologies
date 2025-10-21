@@ -16,24 +16,39 @@ body {
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
   margin-bottom: 25px;
+  padding: 10px 0;
+}
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+.logo {
+  float: left;
+}
 .logo img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  display: block;
 }
 
+.menu {
+  float: right;
+}
 .menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 15px;
+
+}
+.menu li {
+  display: inline-block;
+  margin-left: 15px;
+  vertical-align: middle;
 }
 
 .menu a {
@@ -52,7 +67,6 @@ body {
   color: #fff;
 }
 
-/* ====== Основна частина сторінки ======================================================== */
 .blocks {
   width: 990px;
   margin: 0 auto;

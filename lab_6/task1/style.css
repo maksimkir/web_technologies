@@ -1,4 +1,4 @@
-/* ...existing code... */
+
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f6f8ff;
@@ -16,7 +16,7 @@ body {
   border-radius: 10px;
 }
 
-/* header без flex — використано float/inline-block */
+
 .header {
   overflow: hidden;
   margin-bottom: 25px;
@@ -45,7 +45,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* display:flex видалено */
+
 }
 .menu li {
   display: inline-block;
