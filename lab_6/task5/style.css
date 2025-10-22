@@ -1,4 +1,3 @@
-/* повний вміст файлу style.css з видаленням flex для .header та меню */
 body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f6f8ff;
@@ -16,7 +15,6 @@ body {
   border-radius: 10px;
 }
 
-/* header без flex — використано float/inline-block */
 .header {
   overflow: hidden;
   margin-bottom: 25px;
@@ -45,7 +43,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  /* display:flex видалено */
+
 }
 .menu li {
   display: inline-block;
@@ -69,7 +67,6 @@ body {
   color: #fff;
 }
 
-/* ====== Основна частина сторінки ================================================================================== */
 .gradients {
   width: 990px;
   margin: 0 auto;
@@ -123,7 +120,7 @@ body {
 .gradThree {
   background:
     linear-gradient(to right, green, yellow),
-    radial-gradient(circlіe at center, white, transparent 70%);
+    radial-gradient(circle at center, rgb(255, 255, 255), transparent 70%);
   background-blend-mode: multiply;
 }
 
@@ -138,4 +135,9 @@ body {
 .gradFive {
   background:
     repeating-radial-gradient(circle, red, orange, yellow, green, blue, purple 60%);
+}
+
+.gradSix {
+  background:
+    repeating-radial-gradient(circle, rgb(0, 234, 255), rgb(255, 0, 195), rgb(0, 255, 42), rgb(30, 0, 128), rgb(255, 242, 0), purple 30%);
 }
