@@ -78,8 +78,8 @@ body {
 }
 
 .block {
-  width: 300px;
-  height: 400px;
+  width: 250px;
+  height: 350px;
   text-align: center;
   padding: 15px;
   border-radius: 10px;
@@ -137,7 +137,3 @@ body {
     repeating-radial-gradient(circle, red, orange, yellow, green, blue, purple 60%);
 }
 
-.gradSix {
-  background:
-    repeating-radial-gradient(circle, rgb(0, 234, 255), rgb(255, 0, 195), rgb(0, 255, 42), rgb(30, 0, 128), rgb(255, 242, 0), purple 30%);
-}

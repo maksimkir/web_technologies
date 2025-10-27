@@ -42,7 +42,7 @@ body {
 }
 .menu a {
   padding: 8px 16px;
-  background-color: #e8f0fe;
+  background-color: #f5b2a8;
   color: #222;
   text-decoration: none;
   border-radius: 8px;
@@ -50,7 +50,7 @@ body {
   transition: all 0.3s ease;
 }
 .menu a:hover {
-  background-color: #4a7aff;
+  background-color: #ff6e4a;
   color: #fff;
 }
 
@@ -101,8 +101,8 @@ body {
 }
 
 .image {
-  background: linear-gradient(135deg, #edf2f7, #e2e8f0);
-  border: 1px solid #d1d5db;
+  background: linear-gradient(135deg, #edf2f7, #0862d8);
+  border: 2px solid #d1d5db;
 }
 
 .radiusOne {

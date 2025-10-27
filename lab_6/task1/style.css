@@ -16,12 +16,12 @@ body {
   border-radius: 10px;
 }
 
-
 .header {
   overflow: hidden;
   margin-bottom: 25px;
   padding: 10px 0;
 }
+
 .header::after {
   content: "";
   display: table;
@@ -31,6 +31,7 @@ body {
 .logo {
   float: left;
 }
+
 .logo img {
   width: 70px;
   height: 70px;
@@ -41,12 +42,14 @@ body {
 .menu {
   float: right;
 }
+
 .menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
 
 }
+
 .menu li {
   display: inline-block;
   margin-left: 15px;
