@@ -1,71 +1,47 @@
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
-    position: relative;
-    height: 600px;
+    background: #d0d0d0;
 }
 
-.container {
+.main-container {
+    /* Контейнер повинен бути досить великим, щоб вмістити всі блоки */
     position: relative;
-    width: 90%;
-    max-width: 800px;
-    height: 500px;
-    border: 1px solid #ccc; 
-}
-
-.block {
-    position: absolute;
+    width: 850px; /* Ширина, щоб вмістити 3 верхні блоки */
+    height: 500px; /* Висота для верхнього та нижнього рядів */
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 50px auto;
     padding: 10px;
-    color: white;
-    text-align: center;
-    border: 1px solid white;
+}
+
+/* Базові стилі для всіх блоків */
+.block {
+    position: absolute; /* Ключ до накладання та довільного розміщення */
+    border: 1px solid white; /* Імітація тонких ліній */
     box-sizing: border-box;
+    text-align: center;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    
+    /* Flexbox для вертикального вирівнювання тексту */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 10px;
 }
 
+/* Кольори */
 .green {
-    background-color: #388e3c; 
+    background-color: #388e3c; /* Темно-зелений */
+    z-index: 0;
 }
 
 .purple {
-    background-color: #9c27b0; 
-    opacity: 0.85; 
-}
-
-.block1 {
-    width: 200px;
-    height: 250px;
-    top: 20px;
-    left: 20px;
-    z-index: 0;
-}
-
-.block2 {
-    width: 200px;
-    height: 250px;
-    top: 30px; 
-    left: 190px; 
-    z-index: 1; 
-}
-
-.block3 {
-    width: 350px;
-    height: 250px;
-    top: 20px;
-    left: 420px; 
-    z-index: 0;
-}
-
-.block4 {
-    width: 770px;
-    height: 100px;
-    top: 300px; 
-    left: 20px;
-    z-index: 1;
-    justify-content: center;
+    background-color: #9c27b0; /* Фіолетовий */
+    z-index: 1; /* Зробимо фіолетові блоки завжди зверху */
 }
 
 .block p {
@@ -73,6 +49,45 @@ body {
     line-height: 1.2;
 }
 
-.block3 p {
-    font-size: 1.2em;
+
+/* --- КОНКРЕТНІ БЛОКИ --- */
+
+/* Блок 1: Верхній лівий, зелений */
+.block1 {
+    width: 180px;
+    height: 250px;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+/* Блок 2: Верхній центральний, фіолетовий. Накладається! */
+.block2 {
+    width: 180px;
+    height: 250px;
+    top: 20px;
+    left: 170px; /* Позиціонування для накладання */
+    z-index: 1; /* ВИЩИЙ Z-INDEX для накладання поверх block1 */
+}
+
+/* Блок 3: Верхній правий, великий, зелений */
+.block3 {
+    width: 400px;
+    height: 250px;
+    top: 20px;
+    left: 370px;
+    /* У цьому блоці лише один рядок тексту, тому вирівняємо його по центру */
+    justify-content: center;
+    z-index: 0;
+}
+
+/* Блок 4: Нижній, широкий, фіолетовий */
+.block4 {
+    width: 810px; /* Широкий на всю доступну ширину */
+    height: 100px;
+    top: 300px;
+    left: 20px;
+    /* У цьому блоці лише один рядок тексту */
+    justify-content: center;
+    z-index: 1;
 }
