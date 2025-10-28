@@ -5,27 +5,23 @@ body {
 }
 
 .main-container {
-    /* Контейнер для відносного позиціонування блоків */
     position: relative;
     width: 850px; 
-    height: 500px; /* Висота для верхнього та нижнього рядів */
+    height: 500px; 
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin: 50px auto;
     padding: 10px;
 }
 
-/* Базові стилі для всіх блоків */
 .block {
     position: absolute; 
-    border: 1px solid white; /* Імітація тонких ліній */
+    border: 1px solid white; 
     box-sizing: border-box;
     text-align: center;
     color: white;
     font-size: 1em;
     font-weight: 500;
-    
-    /* Flexbox для вертикального вирівнювання тексту */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -33,15 +29,14 @@ body {
     padding: 10px;
 }
 
-/* Кольори та Z-index */
 .green {
-    background-color: #388e3c; /* Зелений */
+    background-color: #388e3c; 
     z-index: 0;
 }
 
 .purple {
-    background-color: #9c27b0; /* Фіолетовий */
-    z-index: 1; /* Фіолетові блоки розміщуються ПОВЕРХ зелених при накладанні */
+    background-color: #9c27b0; 
+    z-index: 1; 
 }
 
 .block p {
@@ -49,10 +44,6 @@ body {
     line-height: 1.2;
 }
 
-
-/* --- ПОЗИЦІОНУВАННЯ ТА РОЗМІРИ --- */
-
-/* Блок 1: Верхній лівий, зелений */
 .block1 {
     width: 140px;
     height: 250px;
@@ -61,16 +52,14 @@ body {
     z-index: 0;
 }
 
-/* Блок 2: Верхній центральний, фіолетовий. ЗМІЩЕНИЙ для накладання */
 .block2 {
     width: 140px;
     height: 250px;
     top: 20px;
-    left: 170px; /* НАКЛАДАННЯ: зміщено ліворуч, щоб перекрити block1 */
+    left: 170px;
     z-index: 1; 
 }
 
-/* Блок 3: Верхній правий, великий, зелений */
 .block3 {
     width: 460px;
     height: 250px;
@@ -80,7 +69,6 @@ body {
     z-index: 0;
 }
 
-/* Блок 4: Нижній, широкий, фіолетовий */
 .block4 {
     width: 810px; 
     height: 100px;
